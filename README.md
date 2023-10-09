@@ -52,7 +52,7 @@ Follow these steps to set up and run BlogWiz:
    Use Maven to build the project and resolve dependencies:
 
    ```bash
-   mvn clean package
+   mvn spring-boot:run
    ```
 
 4. **Run the Application**:

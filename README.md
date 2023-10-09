@@ -1,7 +1,9 @@
 # BlogWiz - A Simple Blog Management Tool
 
 BlogWiz is a Java-based desktop application for managing your blog content hosted on a remote server. It allows you to connect to a server via SSH, navigate your blog's directory structure, view and edit blog post files, and perform basic file management operations such as creating folders and files.
-
+<p align="center">
+<img src="https://github.com/Niravanaa/BlogWiz/assets/64038962/3875900f-43ec-42ea-b07d-324de904a30d"/>
+</p>
 ## Table of Contents
 
 - [Features](#features)

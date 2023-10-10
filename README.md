@@ -12,7 +12,6 @@ BlogWiz is a Java-based desktop application for managing your blog content hoste
   - [Prerequisites](#prerequisites)
   - [Installation](#installation)
 - [Usage](#usage)
-- [Contributing](#contributing)
 - [License](#license)
 
 ## Features

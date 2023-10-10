@@ -63,7 +63,7 @@ Follow these steps to set up and run BlogWiz:
    After building the project, you can run the application using the following command:
 
    ```bash
-   java -jar target/BlogWiz-1.0-SNAPSHOT.jar
+   java -jar target/BlogWiz-1.0-SNAPSHOT-shaded.jar
    ```
 
    Replace `1.0-SNAPSHOT` with the actual version specified in your `pom.xml` file.

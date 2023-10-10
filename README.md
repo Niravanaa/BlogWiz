@@ -65,9 +65,7 @@ Follow these steps to set up and run BlogWiz:
    ```bash
    java -jar target/BlogWiz-1.0-SNAPSHOT-shaded.jar
    ```
-
-   Replace `1.0-SNAPSHOT` with the actual version specified in your `pom.xml` file.
-
+   
 ## Usage
 
 1. **Launch the Application**: Run the application using the instructions provided in the Installation section.

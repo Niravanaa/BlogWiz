@@ -91,7 +91,7 @@ Follow these steps to set up and run BlogWiz:
 
 6. **Logging**:
    - The application provides a real-time log display at the bottom to keep track of your actions and any potential errors.
-   - 
+   
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.

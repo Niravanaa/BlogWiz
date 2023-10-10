@@ -1,4 +1,4 @@
-package com.example.BlogWiz;
+package BlogWiz.program;
 
 import java.io.BufferedReader;
 import java.io.IOException;

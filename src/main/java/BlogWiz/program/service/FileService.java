@@ -1,15 +1,13 @@
-package com.example.BlogWiz.service;
+package BlogWiz.program.service;
 
-import com.example.BlogWiz.AuthenticationManager;
+import BlogWiz.program.AuthenticationManager;
 import com.jcraft.jsch.*;
-import org.springframework.stereotype.Service;
 
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Vector;
 
-@Service
 public class FileService {
     private final AuthenticationManager authManager;
 

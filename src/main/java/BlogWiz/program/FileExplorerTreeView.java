@@ -1,4 +1,4 @@
-package com.example.BlogWiz;
+package BlogWiz.program;
 
 import javafx.scene.control.TreeItem;
 import javafx.scene.control.TreeView;

@@ -1,5 +1,5 @@
-package com.example.BlogWiz;
-
+package BlogWiz.program;
+	
 import javafx.application.Application;
 import javafx.application.Platform;
 import javafx.scene.Scene;
@@ -8,7 +8,7 @@ import javafx.scene.layout.*;
 import javafx.stage.Stage;
 import javafx.geometry.*;
 
-import com.example.BlogWiz.service.FileService;
+import BlogWiz.program.service.FileService;
 import com.jcraft.jsch.*;
 
 import java.text.SimpleDateFormat;
@@ -273,9 +273,12 @@ public class BlogWizGUI extends Application {
                     }
                 } else {
                     authManager.disconnect();
-
+					
                     // Update UI on the JavaFX application thread
                     Platform.runLater(() -> {
+						TreeItem<String> rootItem = new TreeItem<>("Root");
+						fileExplorerTreeView.setRoot(rootItem);
+						sourceCodeTextArea.clear();
                         appendLog("Disconnected.");
                         connectButton.setText("Connect"); // Toggle button text
                     });

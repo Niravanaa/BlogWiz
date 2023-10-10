@@ -91,17 +91,7 @@ Follow these steps to set up and run BlogWiz:
 
 6. **Logging**:
    - The application provides a real-time log display at the bottom to keep track of your actions and any potential errors.
-
-## Contributing
-
-Contributions are welcome! If you'd like to contribute to this project, please follow these steps:
-
-1. Fork the repository.
-2. Create a new branch for your feature or bug fix: `git checkout -b feature/your-feature-name` or `bugfix/issue-number`.
-3. Commit your changes: `git commit -m "Your descriptive commit message"`.
-4. Push to your branch: `git push origin feature/your-feature-name` or `bugfix/issue-number`.
-5. Open a Pull Request on GitHub.
-
+   - 
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.

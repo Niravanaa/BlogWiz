@@ -33,7 +33,6 @@ BlogWiz is a Java-based desktop application for managing your blog content hoste
 Before you begin, ensure you have met the following requirements:
 
 - **Java Development Kit (JDK)**: Make sure you have Java 11 or later installed on your system.
-- **JavaFX**: If you are using Java 11 or later, you'll need to install JavaFX separately. You can download it from the [OpenJFX website](https://openjfx.io/).
 - **Maven**: You need Maven installed to build and manage the project dependencies.
 
 ### Installation

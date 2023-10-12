@@ -120,6 +120,10 @@ public class FileService {
             if (isFile)
             {
             	channel.put(new ByteArrayInputStream(new byte[0]), fileName);
+				
+				// Set public "read" permission (644)
+				int permission = 0644;  // Octal representation
+				channel.chmod(permission, fileName);
             }
             
             else

@@ -1,5 +1,8 @@
 # BlogWiz - A Simple Blog Management Tool
 
+<b><p align="center">You can download and run the program using <a href="https://drive.google.com/uc?export=download&id=1kLwQhW9VrrHajezgj4FLkl2ReJHdiEg6">this link. </a> (Ensure you have Java installed on your machine)</p></b>
+<b><p align="center">If you are a student of Concordia University, you will need to connect to their VPN, instructions are provided [here](https://www.concordia.ca/it/support/connect-from-home.html).</p></b>
+<br>
 BlogWiz is a Java-based desktop application for managing your blog content hosted on a remote server. It allows you to connect to a server via SSH, navigate your blog's directory structure, view and edit blog post files, and perform basic file management operations such as creating folders and files.
 <p align="center">
 <img height="600" src="https://github.com/Niravanaa/BlogWiz/assets/64038962/3875900f-43ec-42ea-b07d-324de904a30d"/>
@@ -12,7 +15,6 @@ BlogWiz is a Java-based desktop application for managing your blog content hoste
   - [Prerequisites](#prerequisites)
   - [Installation](#installation)
 - [Usage](#usage)
-- [Contributing](#contributing)
 - [License](#license)
 
 ## Features
@@ -31,7 +33,6 @@ BlogWiz is a Java-based desktop application for managing your blog content hoste
 Before you begin, ensure you have met the following requirements:
 
 - **Java Development Kit (JDK)**: Make sure you have Java 11 or later installed on your system.
-- **JavaFX**: If you are using Java 11 or later, you'll need to install JavaFX separately. You can download it from the [OpenJFX website](https://openjfx.io/).
 - **Maven**: You need Maven installed to build and manage the project dependencies.
 
 ### Installation
@@ -55,7 +56,7 @@ Follow these steps to set up and run BlogWiz:
    Use Maven to build the project and resolve dependencies:
 
    ```bash
-   mvn spring-boot:run
+   mvn package
    ```
 
 4. **Run the Application**:
@@ -63,11 +64,9 @@ Follow these steps to set up and run BlogWiz:
    After building the project, you can run the application using the following command:
 
    ```bash
-   java -jar target/BlogWiz-1.0-SNAPSHOT.jar
+   java -jar target/BlogWiz-1.0-SNAPSHOT-shaded.jar
    ```
-
-   Replace `1.0-SNAPSHOT` with the actual version specified in your `pom.xml` file.
-
+   
 ## Usage
 
 1. **Launch the Application**: Run the application using the instructions provided in the Installation section.
@@ -93,17 +92,7 @@ Follow these steps to set up and run BlogWiz:
 
 6. **Logging**:
    - The application provides a real-time log display at the bottom to keep track of your actions and any potential errors.
-
-## Contributing
-
-Contributions are welcome! If you'd like to contribute to this project, please follow these steps:
-
-1. Fork the repository.
-2. Create a new branch for your feature or bug fix: `git checkout -b feature/your-feature-name` or `bugfix/issue-number`.
-3. Commit your changes: `git commit -m "Your descriptive commit message"`.
-4. Push to your branch: `git push origin feature/your-feature-name` or `bugfix/issue-number`.
-5. Open a Pull Request on GitHub.
-
+   
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.

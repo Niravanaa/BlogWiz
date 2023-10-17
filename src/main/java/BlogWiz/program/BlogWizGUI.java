@@ -21,6 +21,8 @@ import java.util.concurrent.Executors;
 public class BlogWizGUI extends Application {
     private TextField usernameField;
     private PasswordField passwordField;
+	private TextField serverField;
+	private TextField portField;
     private Button connectButton;
     private TextArea logTextArea;
     private TextArea sourceCodeTextArea;
@@ -49,10 +51,17 @@ public class BlogWizGUI extends Application {
         Label passwordLabel = new Label("Password:");
         passwordField = new PasswordField();
 
+		Label serverLabel = new Label("Server:");
+        serverField = new TextField();
+		
+		Label portLabel = new Label("Port:");
+        portField = new TextField();
+		
         connectButton = new Button("Connect");
         connectButton.setOnAction(e -> handleConnect());
 
         logTextArea = new TextArea();
+		
         logTextArea.setEditable(false);
 
         sourceCodeTextArea = new TextArea();
@@ -60,10 +69,18 @@ public class BlogWizGUI extends Application {
 
 	     // Create layout
         HBox topBox = new HBox(10); // Top container for username, password, and connect button
-        topBox.getChildren().addAll(usernameLabel, usernameField, passwordLabel, passwordField, connectButton);
+        topBox.getChildren().addAll(usernameLabel, usernameField, passwordLabel, passwordField, serverLabel, serverField, portLabel, portField, connectButton);
 
-        centerBox = new HBox(10); // Center container for source code and file explorer
-        centerBox.getChildren().addAll(sourceCodeTextArea, fileExplorerTreeView); // Add the file explorer and source code text area
+        // Set Hgrow policy for sourceCodeTextArea and fileExplorerTreeView
+		HBox.setHgrow(sourceCodeTextArea, Priority.ALWAYS);
+		HBox.setHgrow(fileExplorerTreeView, Priority.ALWAYS);
+
+		centerBox = new HBox(40); // Center container for source code and file explorer
+		centerBox.getChildren().addAll(sourceCodeTextArea, fileExplorerTreeView);
+
+		// Add constraints to make them fill the width
+		HBox.setHgrow(sourceCodeTextArea, Priority.ALWAYS);
+		HBox.setHgrow(fileExplorerTreeView, Priority.ALWAYS);
 
         VBox mainLayout = new VBox(10); // Main container for topBox, centerBox, and logTextArea
         mainLayout.setPadding(new Insets(10));
@@ -246,17 +263,16 @@ public class BlogWizGUI extends Application {
         // Get the username and password from the UI
         String username = usernameField.getText();
         String password = passwordField.getText();
+		String server = serverField.getText();
+		int port = Integer.parseInt(portField.getText());
 
         // Perform authentication asynchronously
         CompletableFuture<Void> authenticationFuture = CompletableFuture.runAsync(() -> {
             try {
-                String hostname = "login.encs.concordia.ca";
-                int port = 22;
-
                 authManager = new AuthenticationManager();
 
                 if (connectButton.getText().equals("Connect")) {
-                    authManager.connect(hostname, port, username, password);
+                    authManager.connect(server, port, username, password);
 
                     // Update UI on the JavaFX application thread
                     Platform.runLater(() -> {
@@ -276,8 +292,7 @@ public class BlogWizGUI extends Application {
 					
                     // Update UI on the JavaFX application thread
                     Platform.runLater(() -> {
-						TreeItem<String> rootItem = new TreeItem<>("Root");
-						fileExplorerTreeView.setRoot(rootItem);
+						fileExplorerTreeView = new FileExplorerTreeView();
 						sourceCodeTextArea.clear();
                         appendLog("Disconnected.");
                         connectButton.setText("Connect"); // Toggle button text

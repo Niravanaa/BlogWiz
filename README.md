@@ -4,9 +4,8 @@
 <b><p align="center">If you are a student of Concordia University, you will need to connect to their VPN, instructions are provided [here](https://www.concordia.ca/it/support/connect-from-home.html).</p></b>
 <br>
 BlogWiz is a Java-based desktop application for managing your blog content hosted on a remote server. It allows you to connect to a server via SSH, navigate your blog's directory structure, view and edit blog post files, and perform basic file management operations such as creating folders and files.
-<p align="center">
-<img height="600" src="https://github.com/Niravanaa/BlogWiz/assets/64038962/3875900f-43ec-42ea-b07d-324de904a30d"/>
-</p>
+
+<p align="center"><img height="600" src="https://github.com/Niravanaa/BlogWiz/assets/64038962/bab2c03b-700f-470f-bae9-f0184becfbde"/></p>
 
 ## Table of Contents
 
